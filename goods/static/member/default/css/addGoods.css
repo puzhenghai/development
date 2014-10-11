@@ -1,0 +1,169 @@
+body {
+	background: url(<?=PZ::getMemberUrl ();?>/
+	images
+	/ncus_body.png)
+	repeat-x
+	top;
+}
+
+.checkbox {
+	float: left;
+	margin-right: 20px;
+}
+
+.controls>.checkbox:first-child {
+	padding-top: 0px;
+}
+
+#zd-jiage {
+	display: none;
+}
+
+.t-c {
+	margin-top: 10px;
+}
+
+ .examp {
+    overflow: hidden;
+    z-index: 2;
+}
+
+.examp .mask {
+    background-color: #fff;
+    display: block;
+    opacity: 0.85;
+    z-index: 2;
+}
+
+.mask {
+    background-color: #000;
+    display: none;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 143px;
+    height: 123px;
+}
+
+.examp .desc {
+    bottom: 45px;
+    color: #999;
+    font-size: 12px;
+    left: 25;
+    position: absolute;
+    text-align: center;
+    width: 135px;
+    z-index: 3;
+}
+
+ li {
+    border: 1px solid #cdcdcd;
+    display: inline-block;
+    font-size: 0;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: top;
+}
+
+.operate {
+    background: none repeat scroll 0 0 rgba(33, 33, 33, 0.7);
+    bottom: 0;
+    display: none;
+    height: 10px;
+    left: 0;
+    padding: 5px 0 5px 12px;
+    position: absolute;
+    width: 134px;
+    z-index: 5;
+}
+.operate i {
+    background: url("http://img04.taobaocdn.com/tps/i4/T1IoOeXoRsXXXXXXXX-180-130.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+
+.operate i {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    height: 12px;
+    line-height: 0;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 12px;
+}
+
+.operate .toleft {
+    background-position: 0 -13px;
+}
+
+.operate .toright {
+    background-position: -13px -13px;
+}
+
+.operate .del {
+    background-position: -13px 0;
+}
+ .img-hover .operate {
+    display: block;
+}
+
+.preview {
+    background-color: #fff;
+    display: none;
+    font-family: arial;
+    line-height: 90px;
+    text-align: center;
+    z-index: 4;
+}
+
+desc {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.multimage-tabs {
+	background: none repeat scroll 0 0 #fbfbfb;
+    border-color: -moz-use-text-color -moz-use-text-color #e5e5e5;
+    border-image: none;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    clear: both;
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 800px;
+}
+
+.tab {
+	float: left;
+    font-size: 14px;
+    font-weight: normal;
+    height: 50px;
+    line-height: 50px;
+	width: 80px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.actived {
+	background: none repeat scroll 0 0 #e5e5e5;
+}
+.multimage-panels {
+	background: none repeat scroll 0 0 #fff;
+    clear: both;
+    overflow: hidden;
+    padding: 15px;
+    width: 770px;
+    border: 1px solid #e5e5e5;
+}
+
+.ifrm {
+	width: 780px;
+	height: 250px;
+}

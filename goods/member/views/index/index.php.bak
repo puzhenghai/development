@@ -1,0 +1,304 @@
+
+
+<div id="header" class="warp">
+s
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+            $(".sidebar dl dt").click(function () {
+                $(this).toggleClass("hou");
+                var sidebar_id = $(this).attr("id");
+                var sidebar_dd = $(this).next("dd");
+                sidebar_dd.slideToggle("slow", function () {
+                    $.cookie(COOKIE_PRE + sidebar_id, sidebar_dd.css("display"), { expires: 7, path: '/'});
+                });
+            });
+        });
+
+</script>
+<nav class="navmenu pngFix"><span class="left-side pngFix"></span><span class="right-side pngFix"></span>
+    <ul>
+    <li><a class="selected" href="index.php?act=store"><span>卖家中心</span></a></li>
+    <li><a href="#" class=""><span>买家中心</span></a></li>
+    <li><a href="#" class=""><span>账户设置</span></a></li>
+  </ul>
+  </nav>
+<section class="h warp">
+ <div class="layout warp">
+    <div class="sidebar">
+    <dl>
+      <dt id="sidebar_goods_manage" class="hou"><i class="pngFix"></i>商品管理</dt>
+      <dd style="display: block;">
+        <ul>
+          <li><a target="_blank" href="<?=yii::$app->memberUrlManager->createUrl(['goods/add_goods']) ?>" class="normal">商品发布</a></li>
+          <li><a href="#" class="normal">出售中的商品</a></li>
+          <li><a href="#" class="normal">仓库中的商品</a></li>
+          <li><a href="#" class="normal">品牌列表</a></li>
+          <li><a href="#" class="normal">淘宝导入</a></li>
+          <li><a href="#" class="normal">分类管理</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <dl>
+      <dt id="sidebar_order_manage" class="hou"><i class="pngFix"></i>交易管理</dt>
+      <dd style="display: block;">
+        <ul>
+          <li><a href="#" class="normal">订单管理</a></li>
+          <li><a href="#" class="normal">发货</a></li>
+          <li><a href="#" class="normal">发货设置</a></li>
+                    <li><a href="#" class="normal">支付方式</a></li>
+                    <li><a href="#" class="normal">物流工具</a></li>
+          <li><a href="#" class="normal">评价管理</a></li>
+        </ul>
+    </dd></dl>
+    <dl>
+      <dt id="sidebar_promotion_manage"><i class="pngFix"></i>促销管理</dt>
+      <dd style="display: none;">
+        <ul>
+                    <li><a href="#" class="normal">团购管理</a></li>
+                              <li><a href="#" class="normal">限时折扣</a></li>
+          <li><a href="#" class="normal">满即送</a></li>
+          <li><a href="#" class="normal">组合销售</a></li>
+                    <li><a href="#" class="normal">优惠券管理</a></li>
+                    <li><a href="#" class="normal">活动管理</a></li>
+                  </ul>
+      </dd>
+    </dl>
+    <dl>
+      <dt id="sidebar_store_manage"><i class="pngFix"></i>店铺设置</dt>
+      <dd style="display: none;">
+        <ul>
+          <li><a onclick="show_store('');" href="JavaScript:void(0);" class="normal">我的店铺</a></li>
+          <li><a href="#" class="normal">店铺设置</a></li>
+          <li><a href="#" class="normal">主题设置</a></li>
+          <li><a href="#" class="normal">导航管理</a></li>
+          <li><a href="#" class="normal">合作伙伴管理</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <dl>
+      <dt id="sidebar_consult_manage"><i class="pngFix"></i>客服管理</dt>
+      <dd style="display: none;">
+        <ul>
+          <li><a href="#" class="normal">咨询管理</a></li>
+          <li><a href="#" class="normal">退款记录</a></li>
+          <li><a href="#" class="normal">退货记录</a></li>
+          <li><a href="#" class="normal">投诉管理</a></li>
+          <li><a href="#" class="normal">被举报禁售</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <dl>
+      <dt id="sidebar_other_manage"><i class="pngFix"></i>其他设置</dt>
+      <dd style="display: none;">
+        <ul>
+                    <li><a href="#" class="normal">金币管理</a></li>
+                    <li><a href="#" class="normal">广告管理</a></li>
+          <li><a href="#" class="normal">图片空间</a></li>
+        </ul>
+      </dd>
+    </dl>
+    <dl>
+      <dt id="sidebar_store_statistics"><i class="pngFix"></i>店铺统计</dt>
+      <dd style="display: none;">
+        <ul>
+          <li><a href="#" class="normal">流量统计</a></li>
+          <li><a href="#" class="normal">销售统计</a></li>
+          <li><a href="#" class="normal">购买率统计</a></li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  <div class="right-content">
+   <!--未开通之前的提示-->
+   <!--<div class="main">
+<div class="wrap">
+  <div class="open-store">
+    <h1>欢迎来到您我商城系统卖家中心</h1>
+    <h3>您现在还没有店铺，无法对卖家中心功能进行操作，您可以：</h3>
+    <div><em></em>
+      <dl>
+        <dt><a href="index.php?act=member_store&amp;op=create">马上开店&nbsp;›</a></dt>
+        <dd>选择店铺等级并填写相关信息，即可开设您的店铺。</dd>
+      </dl>
+    </div>
+  </div>
+</div>
+    </div>-->
+   <!--开通之后-->
+   <div class="path">
+      <div><a href="#">卖家中心</a> <span>&gt;</span>账户概览</div>
+    </div>
+   <div class="main">
+      
+<div id="home">
+  <div class="intro">
+    <div class="left">
+      <div class="store-pic"><span class="thumb size80"><i></i><img width="80" height="80" alt="<?=$store->store_name ?>" title="<?=$store->store_name ?>" onload="javascript:DrawImage(this,80,80);" src="upload/common/default_store_logo.gif"></span><em><a href="index.php?act=store&amp;op=store_setting">更改店标</a></em></div>
+      <dl class="basic">
+        <dd class="member-name"><?=$store->member_name ?></dd>
+        <dd class="cert">
+                    <a href="#"><?php if($store->store_auth ==0){echo "尚未认证或认证失败";} ?></a>
+           
+        </dd>
+        <dd class="credit"> <span> 卖家信用：0</span>
+                  </dd>
+      </dl>
+      <dl>
+        <dt>店铺名称：</dt>
+        <dd><a onclick="show_store('4');" href="JavaScript:void(0);"><?=$store->store_name ?></a></dd>
+        <dd>湖北省	仙桃市	仙桃市</dd>
+      </dl>
+            <dl>
+        <dt>支付方式：</dt>
+        <dd>
+                    <a class="orange" href="#">尚未选择添加支付方式，立即开通选择</a>
+                  </dd>
+      </dl>
+          </div>
+    <div class="right seller-rate">
+      <h2>店铺动态评分：</h2>
+      <dl>
+        <dt>描述相符：</dt>
+        <dd class="rate-star"><em><i style=" width:0%;"></i></em></dd>
+        <dd>0分</dd>
+      </dl>
+      <dl>
+        <dt>服务态度：</dt>
+        <dd class="rate-star"><em><i style=" width:0%;"></i></em></dd>
+        <dd>0分</dd>
+      </dl>
+      <dl>
+        <dt>发货速度：</dt>
+        <dd class="rate-star"><em><i style=" width:0%;"></i></em></dd>
+        <dd>0分</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="seller-cont">
+    <div class="l">
+      <div class="stroe-info container">
+        <div class="hd">
+          <div class="shop-level"><span>店铺等级：系统默认</span> <span>有效期：不限制</span> <span>可传商品：100</span> <span>可传图片：500</span> </div>
+          <h2>店铺提示</h2>
+        </div>
+        <div class="content">
+          <dl class="focus">
+            <h2>您需要关注的店铺情况：</h2>
+            <dt>商品提示：</dt>
+            <dd><a href="#">仓库待上架商品 (<strong id="tj_goods_storage">0</strong>)</a></dd>
+            <dt>咨询提示：</dt>
+            <dd><a href="#">买家的留言 (<strong id="tj_consult">0</strong>)</a></dd>
+            <dt>违规提示：</dt>
+            <dd><a title="30天内举报记录数" href="#">被举报禁售 (<strong id="tj_inform">0</strong>)</a></dd>
+          </dl>
+          <ul>
+            <li><a href="#">出售中的商品 (<strong id="tj_goods_selling">0</strong>)</a></li>
+            <li><a href="#">违规下架的商品 (<strong id="tj_goods_show0">0</strong>)</a></li>
+                        <li><a href="#">可用金币数 (<strong>0</strong>)</a></li>
+                        <li><a href="#">淘宝数据导入</a></li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="business-info container">
+        <div class="hd">
+          <h2>交易提示</h2>
+        </div>
+        <div class="content">
+          <dl class="focus">
+            <h2>您需要立即处理的交易订单：</h2>
+            <dt>近期售出：</dt>
+            <dd><a href="#">交易中的订单 (<strong id="tj_progressing">0</strong>)</a></dd>
+            <dt>维权提示：</dt>
+            <dd><a href="#">收到维权投诉 (<strong id="tj_complain">0</strong>)</a></dd>
+          </dl>
+          <ul>
+            <li><a href="#">待付款 (<strong id="tj_pending">0</strong>)</a></li>
+            <li><a href="#">待发货 (<strong id="tj_shipped">0</strong>)</a></li>
+            <li><a href="#">待收货 (<strong id="tj_shipping">0</strong>)</a></li>
+            <li><a href="#">待评价 (<strong id="tj_evalseller">0</strong>)</a></li>
+            <li><a title="30天内退款记录数" href="#"> 退款 (<strong id="tj_refund">0</strong>)</a></li>
+            <li><a title="30天内退货记录数" href="#"> 退货 (<strong id="tj_return">0</strong>)</a></li>
+            <li><a title="30天内订单记录数" href="#"> 近期售出 (<strong id="tj_order30">0</strong>)</a></li>
+          </ul>
+          
+        </div>
+      </div>
+            <div class="marketing-info container">
+        <div class="hd">
+          <h2>店铺运营推广</h2>
+        </div>
+        <div class="content">
+                    <dl class="tghd">
+            <dt class="pngFix"><a href="#">团购活动</a></dt>
+            <dd>参与平台发起的团购活动提高商品成交量及店铺浏览量</dd>
+          </dl>
+                              <dl class="xszk">
+            <dt class="pngFix"><a href="#">限时折扣</a></dt>
+            <dd>在规定时间段内对店铺中所选商品进行打折促销活动</dd>
+          </dl>
+          <dl class="mjs">
+            <dt class="pngFix"><a href="#">满即送</a></dt>
+            <dd>商家自定义满即送标准与规则，促进购买转化率</dd>
+          </dl>
+          <dl class="zhxs">
+            <dt class="pngFix"><a href="#">组合销售</a></dt>
+            <dd>商品组合销售、多重搭配更多实惠、商家必备营销方式</dd>
+          </dl>
+                                       <dl class="ggfw">
+            <dt class="pngFix"><a href="#">广告服务</a></dt>
+            <dd>购买商城文字、图片、Flash广告位，提高店铺流量</dd>
+          </dl>
+          <dl class="zthd">
+            <dt class="pngFix"><a href="#">主题活动</a></dt>
+            <dd>选择商品参与平台发布的主题活动，审核后集中展示</dd>
+          </dl>
+          <dl class="yhq">
+            <dt class="pngFix"><a href="#">优惠券</a></dt>
+            <dd>商家自行发布的线下店铺优惠券，供买家打印使用</dd>
+          </dl>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="r">
+      <div class="news container">
+        <div class="hd">
+          <h2>商城公告</h2>
+        </div>
+        <div class="content">
+          <ul>
+                        <li><a title="2.4版火爆销售中" href="#" target="_blank">2.4版火爆销售中</a></li>
+                        <li><a title="促销功能满即送使用说明" href="#" target="_blank">促销功能满即送使用说明</a></li>
+                        <li><a title="促销功能限时折扣使用说明" href="#" target="_blank">促销功能限时折扣使用说明</a></li>
+                        <li><a title="新功能使用说明" href="#" target="_blank">新功能使用说明</a></li>
+                        <li><a title="ShopNC官方使用提示信息" href="#" target="_blank">ShopNC官方使用提示信息</a></li>
+                      </ul>
+        </div>
+      </div>
+      <div class="contact container">
+        <div class="hd">
+          <h2>平台联系方式</h2>
+        </div>
+        <div class="content">
+          <ul>
+                        <li style="width:100%;">电话1：23456789</li>
+                        <li style="width:100%;">电话2：88997788</li>
+                        <li style="width:100%;">邮箱：abc@shopnc.net</li>
+          </ul>
+        </div>
+      </div>
+      <a href=""><img border="0" alt="" src="http://ftp171760.host154.mymyweb.net/upload/adv/adv200-300.gif" style="width:200px;height:350px"></a> 
+    </div>
+  </div>
+  <div class="wrap_line mb5">
+    <div class="info"></div>
+  </div>
+</div>
+</div>
+  </div>
+ <div class="clear"></div>
+</div>
+</section>
