@@ -50,6 +50,7 @@ class SellerController extends Controller{
 	}
 	
 	public function actionIndex() {
+		echo 1;
 		return $this->render('index');
 	}
 }
